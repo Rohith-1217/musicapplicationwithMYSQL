@@ -6,14 +6,19 @@ import com.stackroute.exception.TrackAlreadyExistsException;
 import com.stackroute.exception.TrackNotFoundException;
 import com.stackroute.repository.TrackRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+//Runs this class first
 @Primary
+@Qualifier
 public class TrackServiceImpl implements TrackService{
+
+    //override all methods present in TrackService
 
     TrackRepository trackRepository;
 

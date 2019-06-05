@@ -10,18 +10,24 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
+//Calls Jpa Repository
 @Entity
+//Manages all getter and setter methods
 @Data
+//create a constructor with No Arguements
 @NoArgsConstructor
+//create a constructor with All Arguements
 @AllArgsConstructor
-@Table(name="track")
+@Table(name="track")//Reference for mysql table
 public class Track {
+
     @Column(name="trackid")
-    @Id
+    @Id//Primary Key
     int trackId;
+
     @Column(name="trackname")
     String trackName;
+
     @Column(name="trackcomments")
     String trackComments;
 
